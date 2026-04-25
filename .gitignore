@@ -1,0 +1,12 @@
+# Big dataset files
+Datas/cleaned_data.pkl
+*.pkl
+*.csv
+
+# Virtual environment
+venv/
+.venv/
+
+# Python cache and others
+__pycache__/
+.ipynb_checkpoints/
