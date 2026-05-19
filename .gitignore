@@ -18,7 +18,6 @@ model_env_311/
 
 # Jupyter
 .ipynb_checkpoints/
-Notebooks/
 
 # Data
 Datas/
