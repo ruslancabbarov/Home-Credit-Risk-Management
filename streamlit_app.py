@@ -6,8 +6,11 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+API_URL = os.getenv('API_URL')
 
-API_URL = os.getenv('API_URL', 'http://localhost:8000')
+if not API_URL:
+    # Bura birbaşa sənin Render linkini yazırıq:
+    API_URL = "https://credit-risk-api-9f27.onrender.com"
 
 st.set_page_config(
     page_title="Credit Risk Assessment",
