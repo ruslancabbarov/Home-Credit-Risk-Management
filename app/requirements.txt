@@ -8,3 +8,5 @@ category_encoders
 shap
 joblib==1.3.2
 pydantic
+streamlit
+plotly
