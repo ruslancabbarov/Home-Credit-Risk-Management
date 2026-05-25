@@ -12,6 +12,16 @@ if not API_URL:
     # Bura birbaşa sənin Render linkini yazırıq:
     API_URL = "https://credit-risk-api-9f27.onrender.com"
 
+def get_config(key):
+    if key in st.secrets:
+        return st.secrets[key]
+    return os.getenv(key)
+
+API_URL = get_config("API_URL")
+DATABASE_URL = get_config("DATABASE_URL")
+SUPABASE_KEY = get_config("SUPABASE_KEY")
+SUPABASE_URL = get_config("SUPABASE_URL")
+
 st.set_page_config(
     page_title="Credit Risk Assessment",
     page_icon="🏦",
