@@ -17,6 +17,17 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+def keep_alive():
+    while True:
+        try:
+            requests.get(f"{API_URL}/health", timeout=5)
+        except:
+            pass
+        time.sleep(600)  # 10 dəqiqə
+
+# Background thread-də çalışdır
+thread = threading.Thread(target=keep_alive, daemon=True)
+thread.start()
 # ── CSS ───────────────────────────────────────────────────────
 st.markdown("""
 <style>
