@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import plotly.graph_objects as go
 from dotenv import load_dotenv
+import threading
 import os
 
 load_dotenv()
